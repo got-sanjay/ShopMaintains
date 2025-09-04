@@ -1,8 +1,8 @@
-import express from "express";
+import { Router } from "express";
 import { getSalesAnalytics } from "./analytics.Controller.js";
+import { requireAuth } from "../../middlewares/auth.js";
 
-const router = express.Router();
-
-router.get("/sales", getSalesAnalytics);
+const router = Router();
+router.get("/sales", requireAuth, getSalesAnalytics);
 
 export default router;

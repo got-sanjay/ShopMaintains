@@ -11,7 +11,10 @@ export default function Analytics() {
 
   const fetchStats = async () => {
     try {
-      const { data } = await axios.get("/api/analytics/sales");
+      const token = localStorage.getItem("token");
+      const { data } = await axios.get("/api/analytics/sales", {
+        headers: { Authorization: `${token}` },
+      });
       setStats(data);
     } catch (err) {
       console.error(err);
