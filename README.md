@@ -1,6 +1,6 @@
 # Project MER(N) -Stack
 
-    This project create for demonstract the knowleadge about get react and express.js and connect database for sql server using axios api
+This project create for demonstract the knowleadge about get react and express.js and connect database for sql server using axios api
 
 ## Code Snippet
 
